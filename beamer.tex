@@ -1,0 +1,55 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{#THEME}
+\usecolortheme{#COLOR_THEME}
+
+\title[Short Paper Title]{Presentation Title}
+\subtitle{Presentation Subtitle}
+\author[Author, Another]{F.~Author\inst{1} \and S.~Another\inst{2}}
+\institute[Some University]
+{
+  \inst{1}%
+  Department of Computer Science\\
+  University of Somewhere
+  \and
+  \inst{2}%
+  Department of Theoretical Philosophy\\
+  University of Elsewhere}
+\date[Short Occasion]{Date / Occasion}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{First Section}
+
+\subsection[Short First Subsection Name]{First Subsection Name}
+
+\begin{frame}{This is the slide title.}{This is the slide subtitle.}
+  \begin{block}{Remark}
+    Sample text
+  \end{block}
+  
+  \begin{itemize}
+    \item
+    An item
+    \item
+    Another item
+    \begin{itemize}
+      \item Something
+      \begin{itemize}
+        \item Something else
+      \end{itemize}
+    \end{itemize}
+    \begin{enumerate}
+      \item Thing A
+      \item Thing B
+      \item Thing C
+    \end{enumerate}
+  \end{itemize}
+\end{frame}
+
+\end{document}

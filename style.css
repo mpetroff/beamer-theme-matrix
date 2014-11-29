@@ -1,0 +1,162 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+/* Account for headers */
+body {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+
+
+/*
+ * Theme matrix
+ */
+table {
+  table-layout: fixed;
+}
+.theme-grid {
+  background: #ddd;
+  table-layout: fixed;
+  width: #TABLE_WIDTH;
+}
+tr:nth-child(odd) td:nth-child(even), tr:nth-child(even) td:nth-child(odd) {
+  background: rgba(0,0,0,0.05);
+}
+tr:nth-child(even) td:nth-child(even), tr:nth-child(odd) td:nth-child(odd) {
+  background: rgba(0,0,0,0.1);
+}
+td {
+  height: 170px;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.beamer-thumb {
+  height: 150px;
+  width: 200px;
+}
+.beamer-right {
+  margin-left: 5px;
+}
+
+.iblock {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.table {
+  display: table;
+  margin-bottom: 0;
+}
+.table-row {
+  display: table-row;
+}
+.table-cell {
+  display: table-cell;
+}
+
+
+
+/*
+ * Headers
+ */
+#top-header {
+  position: fixed;
+  top: 0;
+  left: 50px;
+  background: #fff;
+  opacity: 0.95;
+  height: 50px;
+}
+
+#left-header {
+  width: 50px;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  background: #fff;
+  opacity: 0.95;
+}
+
+#top-left-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: #999;  
+}
+
+#top-header table {
+  table-layout: fixed;
+  width: #TABLE_WIDTH;
+}
+#top-header td {
+  height: 50px;
+}
+
+#left-header div {
+  transform: rotate(-90deg);
+  width: 172px;
+  margin-left: -62px;
+}
+#left-header td {
+  width: 10px;
+  margin: 0 auto;
+}
+#left-header table {
+  width: 50px;
+}
+
+
+
+/*
+ * LaTeX logo; based on http://edward.oconnor.cx/2007/08/tex-poshlet
+ */
+.latex {
+  font-family: 'CMU Serif', cmr10, LMRoman10-Regular, 'Nimbus Roman No9 L', 'Times New Roman', Times, serif;
+}
+.latex sub, .latex sup {
+  text-transform: uppercase;
+}
+.latex sub {
+  vertical-align: -0.5ex;
+  margin-left: -0.1667em;
+  margin-right: -0.125em;
+  bottom: 0;
+}
+.latex, .latex sub {
+  font-size: 1em;
+}
+.latex sup {
+  font-size: 0.85em;
+  vertical-align: 0.15em;
+  margin-left: -0.36em;
+  margin-right: -0.15em;
+  top: 0;
+}
+
+
+
+/*
+ * Welcome / help screen button
+ */
+#help-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  /* info-circle.svg */
+  /* From Font Awesome 4.2.0 (fa-info-circle) */
+  background: rgba(255,255,255,0.5) url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cpath%20d%3D%22m61%2070.625v-6.8752q0-0.60152-0.38672-0.98828-0.38676-0.38676-0.98868-0.38676h-4.125v-22q0-0.60159-0.38672-0.98828-0.38672-0.38676-0.98828-0.38676h-13.75q-0.60156%200-0.98828%200.38676-0.38672%200.38669-0.38672%200.98828v6.8752q0%200.60159%200.38672%200.98828%200.38672%200.38676%200.98828%200.38676h4.125v13.75h-4.125q-0.60156%200-0.98828%200.38669-0.38672%200.38676-0.38672%200.98828v6.8752q0%200.60159%200.38672%200.98828t0.98828%200.38669h19.25q0.60156%200%200.98828-0.38669t0.38672-0.98828zm-5.5-38.5v-6.8752q0-0.60159-0.38672-0.98828-0.38742-0.38676-0.98868-0.38676h-8.25q-0.60156%200-0.98828%200.38669t-0.38672%200.98828v6.8752q0%200.60152%200.38672%200.98828%200.38676%200.38676%200.98802%200.38676h8.25q0.60156%200%200.98828-0.38669%200.38672-0.38676%200.38672-0.98828zm27.5%2017.875q0%208.9806-4.426%2016.565-4.4253%207.5834-12.009%2012.009-7.584%204.426-16.565%204.426t-16.565-4.426-12.009-12.009q-4.426-7.584-4.426-16.565t4.426-16.565q4.425-7.583%2012.009-12.009t16.565-4.426q8.9808%200%2016.565%204.4258%207.5841%204.4262%2012.009%2012.009%204.426%207.5841%204.426%2016.565z%22/%3E%3C/svg%3E');
+}
+#help-button:hover {
+  background-color: rgba(255,255,255,0.8);
+}

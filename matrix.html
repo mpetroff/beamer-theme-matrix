@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Another Beamer Theme Matrix</title>
+<meta name="description" content="This theme matrix shows examples of all variations of the Beamer LaTeX package's default themes and color themes.">
+<meta name="keywords" content="LaTeX, Beamer, theme, matrix">
+<link rel="stylesheet" href="bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="style.css"/>
+<link type="text/css" rel="stylesheet" href="slenderbox.css"/>
+</head>
+<body>
+
+
+<!-- Welcome / help screen -->
+<div class="modal in" id="help" tabindex="-1" role="dialog">
+<div class="modal-backdrop in" id="modal-backdrop" onclick="closeHelp()"></div>
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" onclick="closeHelp()"><span>&times;</span><span class="sr-only">Close</span></button>
+<h4 class="modal-title">Another Beamer Theme Matrix</h4>
+</div>
+<div class="modal-body">
+<p>
+As you probably know, <a href="http://bitbucket.org/rivanvx/beamer/">Beamer</a>
+is a <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> package for
+creating presentation slides. This matrix shows examples of all variations of
+the default themes and color themes.
+</p>
+<p>
+The matrix&rsquo;s rows list the default Beamer themes, and the matrix&rsquo;s columns list
+the default Beamer color themes. In a <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>
+document&rsquo;s preamble, set the theme using <code>\usetheme{Berlin}</code> and set
+the the color theme using <code>\usecolortheme{crane}</code>, where
+<code>Berlin</code> and <code>crane</code> are replaced with the theme and
+color theme of your choosing.
+<p>
+<p>
+The code used to generate this page is available on
+<a href="https://github.com/mpetroff/beamer-theme-matrix">GitHub</a>. This page
+was inspired by the <a href="http://www.hartwork.org/beamer-theme-matrix/">
+original Beamer Theme Matrix</a>.
+</p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-primary" onclick="closeHelp()">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Headers -->
+<div id="top-header">
+<table>
+<tr>
+#TOP_HEADER
+</tr>
+</table>
+</div>
+<div id="left-header">
+<table>
+#LEFT_HEADER
+</table>
+</div>
+<div id="top-left-block"><div id="help-button" onclick="openHelp()"></div></div>
+
+
+<!-- Main content -->
+#TABLE
+
+
+<!-- Scripts -->
+<script type="text/javascript" src="slenderbox.js"></script>
+<script>
+document.addEventListener('scroll', function() {
+    var topHeader = document.getElementById('top-header');
+    topHeader.style.left = (50 - window.scrollX) + 'px';
+    
+    var leftHeader = document.getElementById('left-header');
+    leftHeader.style.top = (50 - window.scrollY) + 'px';
+}, false);
+
+function openHelp() {
+    var help = document.getElementById('help');
+    help.style.display = 'block';
+    document.body.classList.add('modal-open');
+    document.getElementById('modal-backdrop').style.height = help.scrollHeight + 'px';
+}
+// Show help on page load (this way the page still works without JavaScript)
+openHelp();
+
+function closeHelp() {
+    document.getElementById('help').style.display = 'none';
+    document.body.classList.remove('modal-open');
+}
+</script>
+
+
+</body>
+</html>
